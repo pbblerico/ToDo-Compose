@@ -6,4 +6,8 @@
     <string name="delete_all_action">Delete All</string>
     <string name="search_icon">Search icon</string>
     <string name="close_icon">Close icon</string>
+    <string name="sad_face_icon">Sad Face Icon</string>
+    <string name="empty_content">Empty Content</string>
+    <string name="add_task">Add Task</string>
+    <string name="back_arrow">Back Arrow</string>
 </resources>
