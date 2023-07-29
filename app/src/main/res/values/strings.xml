@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ToDo-Compose</string>
+    <string name="add_button">Add Button</string>
+    <string name="search_button">Search Tasks</string>
+    <string name="sort_action">Sort Tasks</string>
+    <string name="delete_all_action">Delete All</string>
+    <string name="search_icon">Search icon</string>
+    <string name="close_icon">Close icon</string>
 </resources>
