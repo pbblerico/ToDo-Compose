@@ -11,6 +11,7 @@ import com.example.todo_compose.util.SearchAppBarState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -39,4 +40,13 @@ class SharedViewModel @Inject constructor(
         }
     }
 
+    private val _selectedTask: MutableStateFlow<ToDoTask?> = MutableStateFlow(null)
+    val selectedTask: StateFlow<ToDoTask?> = _selectedTask
+    fun getSelectedTask(taskId: Int) {
+        viewModelScope.launch {
+            repository.getSelectedTask(taskId = taskId).collect { task ->
+                _selectedTask.value = task
+            }
+        }
+    }
 }
